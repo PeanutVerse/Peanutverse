@@ -753,11 +753,11 @@ body {
 /* Para pantallas extra pequeñas (móviles muy pequeños) */
 @media screen and (max-width: 480px) {
     .header h1 {
-        font-size: 1.8em; /* Ajusta aún más el tamaño */
+        font-size: 1.6em; /* Ajusta aún más el tamaño */
     }
 
     .text-cloud h1 {
-        font-size: 1.5em;
+        font-size: 1.1em;
     }
 
     .text-cloud p {
