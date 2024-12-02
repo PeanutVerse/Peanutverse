@@ -653,3 +653,149 @@ body {
     transform: scale(0.98);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+/* Ajustes generales para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Ajusta la fuente para pantallas más pequeñas */
+    }
+
+    /* Fondo de la página */
+    .background-animation {
+        background-size: cover; /* Asegura que el fondo se ajuste bien */
+    }
+
+    /* Encabezado */
+    .header h1 {
+        font-size: 2.5em; /* Reduce el tamaño de la fuente */
+    }
+
+    .text-cloud h1 {
+        font-size: 2em; /* Reduce el tamaño de la fuente */
+    }
+
+    .text-cloud p {
+        font-size: 1.2em; /* Ajusta el tamaño de la fuente */
+    }
+
+    /* Secciones */
+    .preview, .roadmap, .future-preview, .roadmap-container {
+        max-width: 100%;
+        padding: 1.5em;
+        margin: 1.5em auto;
+        font-size: 1em; /* Reducir tamaño de texto */
+    }
+
+    /* Botón de compra */
+    .buy-button {
+        font-size: 1em;
+        padding: 0.8em 1.5em; /* Ajusta el tamaño del botón */
+    }
+
+    /* Footer */
+    .footer {
+        font-size: 0.8em;
+    }
+
+    /* Nubes */
+    .mission-cloud, .vision-cloud {
+        width: 70%;
+        margin: 1em auto;
+        padding: 1.2em;
+        font-size: 1.2em;
+    }
+
+    /* Memes */
+    .memes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meme img {
+        width: 100%; /* Ajusta el tamaño de las imágenes */
+    }
+
+    /* Navbar */
+    .navbar-list {
+        flex-direction: column; /* Apila los elementos en móviles */
+        align-items: center;
+    }
+
+    .navbar-list li {
+        margin: 0.5em 0;
+    }
+
+    /* Ajustes en la sección Tokenomics */
+    .tokenomics-description {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .tokenomics-flex {
+        flex-direction: column;
+        gap: 1em; /* Ajusta el espaciado entre los elementos */
+    }
+
+    /* Ajustes para el input de cantidad de tokens */
+    .token-amount-input {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    /* Ajustes para el botón de compra pequeño */
+    .buy-button.small-button {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+}
+
+/* Para pantallas extra pequeñas (móviles muy pequeños) */
+@media screen and (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8em; /* Ajusta aún más el tamaño */
+    }
+
+    .text-cloud h1 {
+        font-size: 1.5em;
+    }
+
+    .text-cloud p {
+        font-size: 1em;
+    }
+
+    .preview, .roadmap, .future-preview {
+        padding: 1em;
+    }
+
+    .buy-button {
+        font-size: 1.1em;
+        padding: 0.6em 1.2em;
+    }
+
+    .navbar-list li {
+        font-size: 1em; /* Ajusta tamaño de texto en el navbar */
+    }
+
+    .tokenomics h2 {
+        font-size: 1.8rem;
+    }
+
+    .tokenomics-description ul {
+        padding: 0;
+    }
+
+    .mission-cloud, .vision-cloud {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    .mission-cloud h2, .vision-cloud h2 {
+        font-size: 1.8em;
+    }
+
+    .token-amount-input {
+        font-size: 1.1em;
+        padding: 8px;
+    }
+}
