@@ -1,0 +1,438 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="¡Bienvenido a PeanutVerse, el universo donde los memes y los cacahuates dominan! Compra tokens y únete a la diversión." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeanutVerse - Página de Lanzamiento</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+
+
+    <style>
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icon {
+            font-size: 30px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            color: #FFD700;
+        }
+
+        .tokenomi-button {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border-radius: 30px;
+            font-size: 1.1em;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .tokenomi-button:hover {
+            background-color: #ff3b2d;
+            box-shadow: 0px 6px 15px rgba(255, 99, 71, 0.6);
+        }
+
+        .tokenomi-button:active {
+            transform: scale(0.98);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#comprar">Comprar Token</a></li>
+            <li><a href="#roadmap">Hoja de Ruta</a></li>
+            <li><a href="#future-preview">Vista Previa</a></li>
+            <!-- Nuevo botón para Tokenomi -->
+           <li><a href="#tokenomics" id="tokenomi-button" class="tokenomi-button">Tokenomi</a></li>
+           <li><a href="#" id="connectWallet" class="connect-wallet-button">Conecta Wallet</a></li>
+
+
+        </ul>
+    </nav>
+
+    <!-- Fondo animado -->
+    <div class="background-animation" id="home"></div>
+
+    <!-- Encabezado -->
+    <header class="header" data-aos="fade-up">
+        <div class="text-cloud">
+            <h1>🌰 PeanutVerse 🌎</h1>
+            <p>¡Donde los Memes y los Cacahuates Conquistan el Multiverso! 😂🥜</p>
+        </div>
+    </header>
+
+    <!-- Contenedor de memes -->
+    <div class="memes-container" data-aos="fade-in">
+        <div class="meme">
+            <img src="dog.webp" alt="Doge Meme">
+            <div class="cloud">Yo soy Doge, ¡y PeanutVerse es wow! 🐶✨</div>
+        </div>
+        <div class="meme">
+            <img src="pepe.webp" alt="Pepe the Frog">
+            <div class="cloud">Soy Pepe 🐸. Este lugar es legendario.</div>
+        </div>
+    </div>
+
+    <!-- Cuenta regresiva -->
+    <section class="countdown" id="countdown" data-aos="zoom-in">
+        <h2>⏳ Cuenta Regresiva para el Lanzamiento</h2>
+        <div id="countdown-timer">
+            <span id="days">00</span>D : 
+            <span id="hours">00</span>H : 
+            <span id="minutes">00</span>M : 
+            <span id="seconds">00</span>S
+        </div>
+    </section>
+
+    <!-- Vista previa: Comprar token -->
+    <section id="comprar" class="preview" data-aos="fade-up">
+        <h1>PREVENTA EN VIVO: ¡Sea de los primeros en comprar Peanut! y asegúrate un lugar en el Airdrop del lanzamiento</h1>
+         
+        <!-- Contenedor de la preventa con input y botón -->
+         <div class="preventa-container">
+            <div class="token-input-label">1 Peanut = 0.00001 BNB</div>
+            <!-- Casilla para ingresar la cantidad de tokens -->
+            <input type="number" id="tokenAmount" class="token-amount-input" placeholder="Cantidad de BNB" min="1" />
+
+            <!-- Mostrar la cantidad de tokens que el usuario recibirá -->
+            <p id="tokensReceived">Recibirás: 0 Peanut</p>
+
+
+            <!-- Botón de compra pequeño -->
+            <button id="buyTokensBtn" class="buy-button">Comprar 🚀</button>
+        </div>
+    </section>
+
+    <!-- Nueva Hoja de Ruta -->
+    <section class="roadmap" id="roadmap" data-aos="fade-left">
+        <div class="roadmap-container">
+            <div class="roadmap-title">
+                <h1>Hoja de Ruta: Edición Meme 🚀✨</h1>
+            </div>
+            <div class="timeline">
+                <!-- Primera etapa -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="icon-container">
+                        <img src="etapa1-Photoroom.png" alt="Icono Etapa 1" class="icon">
+                    </div>
+                    <div class="stage">
+                        <h2>Etapa 1: "Pensando si vale la pena 🥴"</h2>
+                        <p>2023 - Reunión con más memes que ideas reales.</p>
+                    </div>
+                </div>
+                <!-- Segunda etapa -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="icon-container">
+                        <img src="etapa2-Photoroom.png" alt="Icono Etapa 2" class="icon">
+                    </div>
+                    <div class="stage">
+                        <h2>Etapa 2: "Modo proactivo activado 😎"</h2>
+                        <p>2024 - Ideas geniales que probablemente nadie entienda.</p>
+                    </div>
+                </div>
+                <!-- Tercera etapa -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="icon-container">
+                        <img src="etapa3-Photoroom.png" alt="Icono Etapa 3" class="icon">
+                    </div>
+                    <div class="stage">
+                        <h2>Etapa 3: "Prototipo listo (pero con bugs 😂)"</h2>
+                        <p>2024 - Funciona... a veces.</p>
+                    </div>
+                </div>
+                <!-- Cuarta etapa -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="icon-container">
+                        <img src="etapa4-Photoroom.png" alt="Icono Etapa 4" class="icon">
+                    </div>
+                    <div class="stage">
+                        <h2>Etapa 4: "Lanzamiento épico 🚀"</h2>
+                        <p>2025 - ¡Boom! Todos los memes son virales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+<!-- Tokenomics -->
+<section class="tokenomics" id="tokenomics" data-aos="fade-up">
+    <h2>💰 Tokenomics de PeanutVerse 💰</h2>
+    <p>Descubre cómo distribuimos nuestro token para asegurar el crecimiento y la sostenibilidad del proyecto.</p>
+
+    <!-- Contenedor flexbox -->
+    <div class="tokenomics-flex">
+        <!-- Descripción -->
+        <div class="tokenomics-description">
+            <ul>
+                <li><strong>Total Supply</strong>: 1,000,000,000 Tokens</li>
+                <li><strong>Airdrop</strong>: 15% (150,000,000 tokens)</li>
+                <li><strong style="color: rgb(73, 183, 227);">Airdrop_Adicional para los primeros 3000</strong>: 5% (50,000,000 tokens)</li>
+                <li><strong>Liquidez</strong>: 25% (250,000,000 tokens)</li>
+                <li><strong>Publicidad y Marketing</strong>: 10% (100,000,000 tokens)</li>
+                <li><strong>Desarrollo</strong>: 5% (50,000,000 tokens)</li>
+                <li><strong>Tenedores</strong>: 20% (200,000,000 tokens)</li>
+                <li><strong>Reserva</strong>: 20% (200,000,000 tokens)</li>
+            </ul>
+        </div>
+        <!-- Gráfico -->
+        <div class="chart-container">
+            <canvas id="tokenomicsChart"></canvas>
+        </div>
+    </div>
+</section>
+
+<style>
+    .chart-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    #tokenomicsChart {
+        width: 100%;
+        height: 400px;
+    }
+    </style>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const ctx = document.getElementById('tokenomicsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Airdrop', 'Airdrop_Adicional', 'Liquidez', 'Publicidad', 'Desarrollo', 'Tenedores', 'Reserva'],
+                datasets: [{
+                    data: [15, 5, 25, 10, 5, 20, 20],
+                    backgroundColor: ['#FF6384', '#FFCE56', '#FFC0CB', '#4BC0C0', '#36A2EB', '#FF9F40', '#FF9F09']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'right' }
+                }
+            }
+        });
+    });
+    </script>
+
+
+    
+    <section class="mission-vision">
+        <div class="mission-cloud" data-aos="zoom-in">
+            <h2>🌟 Nuestra Misión 🌟</h2>
+            <p>
+                <strong>"Unir a todos los memes legendarios en un multiverso donde la diversión nunca termina."</strong>  
+                Porque en el PeanutVerse, ¡cada meme tiene un propósito (aunque sea hacerte reír hasta llorar)!
+            </p>
+        </div>
+        <div class="vision-cloud" data-aos="zoom-in">
+            <h2>🔮 Nuestra Visión 🔮</h2>
+            <p>
+                <strong>"Ser el lugar donde cada meme, desde el más tierno hasta el más caótico, prospere en armonía y caos calculado."</strong>  
+                Un universo donde el humor gobierna y todos son bienvenidos... si traes cacahuates, claro.
+            </p>
+        </div>
+    </section>
+
+    <!-- Vista previa futura -->
+    <section class="future-preview" id="future-preview" data-aos="fade-up">
+        <h2>Vista Previa del Futuro de PeanutVerse</h2>
+        <div class="future-image">
+            <img src="vistaprevia.webp" alt="Vista previa divertida de PeanutVerse">
+        </div>
+    </section>
+
+    <!-- Pie de página con iconos de redes sociales -->
+    <footer class="footer" id="contact" data-aos="fade-up">
+        <p>© 2024 PeanutVerse - Cacahuates y Memes para Todos</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+
+    <!-- Agregar la librería AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Inicializa AOS cuando se carga la página
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+        });
+    </script>
+ <script>
+    const ctx = document.getElementById('tokenomicsChart').getContext('2d');
+    const tokenomicsChart = new Chart(ctx, {
+        type: 'pie', // Tipo de gráfico
+        data: {
+            labels: [
+                'Airdrop (10%)',
+                'Liquidez (15%)',
+                'Publicidad y Marketing (10%)',
+                'Desarrollo (20%)',
+                'Tenedores (25%)',
+                'Reserva (20%)'
+            ],
+            datasets: [{
+                label: 'Distribución de Tokens',
+                data: [10, 15, 10, 20, 25, 20], // Porcentajes
+                backgroundColor: [
+                    '#FF6384', // Airdrop
+                    '#FFCE56', // Liquidez
+                    '#FFC0CB', // Publicidad
+                    '#4BC0C0', // Desarrollo
+                    '#36A2EB', // Tenedores
+                    '#FF9F40'  // Reserva
+                ],
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'right',
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+    // Verificar si MetaMask está disponible
+    if (typeof window.ethereum !== 'undefined') {
+        console.log('MetaMask está disponible!');
+        
+        const connectWalletButton = document.getElementById('connectWallet');
+        
+        connectWalletButton.addEventListener('click', async () => {
+            try {
+                // Solicitar la conexión con MetaMask
+                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                
+                if (accounts.length > 0) {
+                    alert('Conectado con la wallet: ' + accounts[0]);
+                } else {
+                    alert('No se pudo conectar con MetaMask.');
+                }
+            } catch (error) {
+                console.error('Error conectando la wallet: ', error);
+                alert('Error al conectar la wallet');
+            }
+        });
+    } else {
+        alert('MetaMask no está disponible. Por favor, instálalo para conectar tu wallet.');
+    }
+</script>
+
+
+<!-- Conexión MetaMask y compra de tokens -->
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+<script>
+    if (typeof window.ethereum !== 'undefined') {
+        console.log('MetaMask está disponible!');
+        const connectWalletButton = document.getElementById('connectWallet');
+        const buyButton = document.getElementById('buyTokensBtn');
+        let provider, signer, contract;
+
+        const contractAddress = "0xfF173b10B2D2f4B3d3eb3f10f09555f945fa9D21";  // Reemplaza con tu contrato real
+        const contractABI = [
+            {
+                "inputs": [],
+                "name": "buyTokens",
+                "outputs": [],
+                "stateMutability": "payable",
+                "type": "function"
+            }
+        ];
+
+        // Conectar con MetaMask
+        connectWalletButton.addEventListener('click', async () => {
+            try {
+                provider = new ethers.providers.Web3Provider(window.ethereum);
+                signer = provider.getSigner();
+                contract = new ethers.Contract(contractAddress, contractABI, signer);
+                await window.ethereum.request({ method: 'eth_requestAccounts' });
+                const accounts = await provider.listAccounts();
+                alert('Conectado con la wallet: ' + accounts[0]);
+            } catch (error) {
+                console.error('Error al conectar MetaMask:', error);
+                alert('Error al conectar con MetaMask');
+            }
+        });
+
+        // Función para comprar tokens
+        buyButton.addEventListener('click', async () => {
+    const amount = document.getElementById('tokenAmount').value;
+    
+    if (amount <= 0) {
+        alert("Por favor, ingresa una cantidad válida de tokens.");
+        return;
+    }
+
+    const amountInEther = ethers.utils.parseEther(amount.toString()); // Conversión de tokens a BNB
+
+    try {
+        // Inicia la compra de tokens
+        const tx = await contract.buyTokens({ value: amountInEther });
+        await tx.wait();  // Espera a que la transacción sea confirmada
+        alert('¡Compra exitosa! Has recibido tus tokens.');
+    } catch (error) {
+        console.error('Error al realizar la compra:', error);
+        alert('Error al procesar la compra. Intenta nuevamente.');
+    }
+});
+
+    } else {
+        alert('MetaMask no está disponible. Por favor, instala MetaMask para conectar tu wallet.');
+    }
+</script>
+
+<script>
+    // Función para calcular la cantidad de tokens basada en la cantidad de BNB
+    document.getElementById('tokenAmount').addEventListener('input', function() {
+        const tokenAmount = parseFloat(this.value);
+        const tokenPriceInBNB = 0.00001; // 1 Peanut = 0.00001 BNB
+        
+        if (isNaN(tokenAmount) || tokenAmount <= 0) {
+            document.getElementById('tokensReceived').textContent = "Recibirás: 0 Peanut";
+        } else {
+            const tokens = tokenAmount / tokenPriceInBNB;
+            document.getElementById('tokensReceived').textContent = `Recibirás: ${tokens.toFixed(0)} Peanut`;
+        }
+    });
+</script>
+
+
+</body>
+</html>

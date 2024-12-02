@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap'); /* Fuente llamativa */
+
+/* Fuente global */
+body {
+    font-family: 'Luckiest Guy', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Fondo claro para el cuerpo */
+}
+
+/* Fondo animado con colores suaves */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Asegura que el fondo ocupe toda la pantalla */
+    background-image: url('fondo2.webp'); /* Cambiado a la nueva imagen */
+    background-size: cover; /* La imagen cubre todo el espacio disponible */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en la pantalla */
+    opacity: 0.7; /* Añade transparencia al fondo */
+    z-index: -1;
+}
+
+/* Encabezado con texto de nube */
+.header {
+    text-align: center;
+    padding: 2em 0;
+    color: #ff6f61;
+}
+
+.text-cloud {
+    display: inline-block;
+    position: relative;
+    padding: 0.5em 2em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 255, 0.6);
+}
+
+.text-cloud h1 {
+    font-size: 3.5em;
+    color: #ff6f61;
+    margin: 0;
+    animation: textBounce 1s infinite alternate;
+    text-shadow: 1px 1px 3px rgba(0, 0, 255, 0.6), 0 0 5px rgba(0, 0, 255, 0.4);
+}
+
+.text-cloud p {
+    font-size: 1.5em;
+    color: #87CEEB;
+    margin-bottom: 1em;
+    text-shadow: 
+        -2px -2px 0px #333,
+        2px -2px 0px #333,
+        -2px 2px 0px #333,
+        2px 2px 0px #333,
+        4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Secciones con tonos pastel */
+.preview, .roadmap, .future-preview {
+    max-width: 700px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: rgba(255, 245, 235, 0.9);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.preview h2, .roadmap h2, .future-preview h2 {
+    color: #ff6f61;
+    font-size: 2.2em;
+}
+
+.preview p, .roadmap ul li {
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* Botón para comprar tokens con estilo azul pastel */
+.buy-button {
+    padding: 1em 2em;
+    color: #ffffff;
+    background-color: #a2c8f2; /* Azul pastel */
+    border: 2px solid #7aaed7; /* Borde en azul suave */
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(162, 200, 242, 0.7); /* Sombra suave para el botón */
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px); /* Fondo desenfocado detrás */
+}
+
+/* Efecto cuando el botón está en hover */
+.buy-button:hover {
+    background-color: #a8e6cf; /* Verde suave al pasar el mouse */
+    border: 2px solid #76d7c4; /* Borde más brillante en verde */
+    box-shadow: 0 0 25px rgba(162, 200, 242, 1); /* Brillo suave */
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+}
+
+/* Efecto al presionar el botón */
+.buy-button:active {
+    transform: scale(1.05); /* Ligeramente más pequeño al hacer clic */
+    box-shadow: 0 0 30px rgba(162, 200, 242, 1);
+}
+
+/* Footer más amigable */
+.footer {
+    background-color: #ffd8e8;
+    color: #555;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9em;
+    border-top: 2px solid #ff6f61;
+}
+
+/* Animación de emojis */
+.emoji {
+    position: fixed;
+    bottom: 0;
+    font-size: 2em;
+    animation: floatUp 5s ease forwards;
+    z-index: 10;
+    color: rgba(255, 200, 200, 0.9);
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100vh);
+    }
+}
+
+/* Contenedor de memes */
+.memes-container {
+    display: flex;
+    justify-content: space-between; /* Separa las imágenes hacia los extremos */
+    align-items: center;
+    margin: 2em auto;
+    max-width: 90%;
+    padding: 0 3em; /* Espaciado adicional en los bordes */
+}
+
+.meme {
+    position: relative;
+    text-align: center;
+    width: 200px;
+}
+
+.meme img {
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.meme img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Nube de diálogo */
+.cloud {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.5em;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Cuenta regresiva */
+.countdown {
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: -5cm;
+    color: #ff6f61;
+}
+
+.countdown h2 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3em;
+    color: #ff6f61;
+    text-shadow: 
+        -2px -2px 0px #3333ff,
+        2px -2px 0px #3333ff,
+        -2px 2px 0px #3333ff,
+        2px 2px 0px #3333ff,
+        4px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+/* Cambios en el contador */
+#countdown-timer {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.5em;
+    display: inline-block;
+    margin-top: -0.2em; /* Ajustado el margen superior para acercarlo más al título */
+    animation: rainbowColor 5s linear infinite;
+}
+
+/* Animación arcoíris para los números (colores más claros) */
+@keyframes rainbowColor {
+    0% { color: rgba(255, 99, 71, 0.8); }  /* Rojo claro */
+    14% { color: rgba(255, 165, 0, 0.8); }  /* Naranja claro */
+    28% { color: rgba(255, 255, 0, 0.8); }  /* Amarillo claro */
+    42% { color: rgba(144, 238, 144, 0.8); }  /* Verde claro */
+    57% { color: rgba(135, 206, 235, 0.8); }  /* Azul claro */
+    71% { color: rgba(75, 0, 130, 0.8); }  /* Índigo claro */
+    85% { color: rgba(238, 130, 238, 0.8); }  /* Violeta claro */
+    100% { color: rgba(255, 99, 71, 0.8); }  /* Rojo claro */
+}
+
+/* Estilos para la nueva Hoja de Ruta */
+.roadmap-container {
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: rgba(255, 245, 235, 0.95);
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.roadmap-title h1 {
+    font-size: 2.5em;
+    color: #ff6f61;
+    margin-bottom: 1em;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.timeline {
+    position: relative;
+    padding: 2em 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #ff6f61;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 1em 2em;
+    position: relative;
+    width: 50%;
+    margin-bottom: -6em;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: white;
+    border: 4px solid #ff6f61;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+
+.icon-container {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.icon {
+    width: 99px;
+    height: 99px;
+}
+
+.stage h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.stage p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Ajustes para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        margin-bottom: 2em;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0%;
+    }
+
+    .timeline-item::after {
+        left: 15px;
+    }
+}
+
+/* Menú de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(173, 216, 230, 0.7); /* Azul pastel transparente */
+    z-index: 1000; /* Para asegurarse que esté por encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar-list li {
+    margin: 0 1.5em;
+}
+
+.navbar-list a {
+    font-family: 'Luckiest Guy', cursive;
+    color: #eef3f4;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover */
+.navbar-list a:hover {
+    background-color: #ff6f61;
+    color: white;
+    transform: scale(1.1); /* Aumentar tamaño al pasar el mouse */
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .navbar-list {
+        flex-direction: column;
+    }
+
+    .navbar-list li {
+        margin: 0.5em 0;
+    }
+}
+.future-image img {
+    max-width: 80%; /* La imagen no excederá el ancho del contenedor */
+    height: auto;    /* Mantiene la proporción original de la imagen */
+    display: block;
+    margin: 0 auto;  /* Centra la imagen horizontalmente */
+    border-radius: 15px; /* Bordes redondeados opcionales */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para un diseño más elegante */
+}
+/* Contenedor general */
+.mission-vision {
+    position: relative; /* Para permitir el posicionamiento de las nubes */
+    max-width: 800px;
+    margin: 3em auto;
+    text-align: center;
+    z-index: 0; /* Para que las nubes queden encima */
+}
+
+/* Nubes */
+.mission-cloud, .vision-cloud {
+    position: absolute;
+    width: 40%; /* Ajusta el ancho de las nubes */
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    border-radius: 50px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    text-align: center;
+    z-index: 1;
+    animation: float 4s ease-in-out infinite; /* Movimiento flotante */
+}
+
+/* Posicionamiento de las nubes */
+.mission-cloud {
+    top: -50px;
+    left: -45%; /* Mueve la nube de misión hacia la izquierda */
+}
+
+.vision-cloud {
+    top: -50px;
+    right: -45%; /* Mueve la nube de visión hacia la derecha */
+}
+
+/* Estilo de los textos */
+.mission-cloud h2, .vision-cloud h2 {
+    color: #d35400; /* Color vibrante */
+    font-size: 2.2em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5em;
+}
+
+.mission-cloud p, .vision-cloud p {
+    font-size: 1.3em;
+    color: #96d5ee;
+    line-height: 1.6em;
+    margin-bottom: 0;
+}
+
+.mission-cloud p strong, .vision-cloud p strong {
+    color: #5D6D7E;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación flotante */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Adaptación para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .mission-cloud, .vision-cloud {
+        position: static; /* Coloca las nubes dentro del flujo normal */
+        width: 80%; /* Reduce el ancho */
+        margin: 1em auto; /* Centra las nubes */
+    }
+
+    .mission-vision {
+        text-align: center; /* Ajusta el diseño en pantallas pequeñas */
+    }
+}
+
+/* Estilos para la sección Tokenomics */
+.tokenomics {
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tokenomics h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tokenomics p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.tokenomics-description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    text-align: left;
+    display: inline-block;
+    max-width: 500px;
+}
+
+.tokenomics-description li {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tokenomics-description strong {
+    color: #333;
+}
+
+
+.nube-tokenomics {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 900px;
+    max-width: 90%;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Bordes para simular la nube */
+.nube-tokenomics::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 30px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+.tokenomics-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px; /* Reduce el espacio entre el texto y el gráfico */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tokenomics-description {
+    flex: 1 1 40%;
+    max-width: 60%;
+    margin: 0; /* Asegúrate de que no tenga márgenes */
+    padding: 0;
+}
+
+.chart-container {
+    flex: 1 1 40%;
+    max-width: 60%;
+    margin-top: 10px;
+    margin: 0; /* Elimina cualquier espacio adicional */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tokenomicsChart {
+    margin: 0; /* Asegúrate de que el canvas no tenga márgenes */
+    padding: 0;
+}
+.connect-wallet-button {
+    padding: 10px 20px;
+    background-color: #4BC0C0;
+    color: white;
+    border-radius: 30px;
+    font-size: 1.1em;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-left: auto; /* Alinea el botón a la derecha */
+}
+
+.connect-wallet-button:hover {
+    background-color: #36A2EB;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.connect-wallet-button:active {
+    transform: scale(0.98);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: space-between; /* Distribuye los items de forma equidistante */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+ /* Estilos para el contenedor de preventa */
+ .preventa-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilo para el input de cantidad de tokens */
+.token-amount-input {
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 20px;
+    border: 2px solid #4BC0C0;
+    width: 150px;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.token-amount-input:focus {
+    border-color: #36A2EB;
+}
+
+/* Estilo para el botón de compra más pequeño */
+.buy-button.small-button {
+    padding: 8px 15px;
+    font-size: 1em;
+    background-color: #4BC0C0;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.buy-button.small-button:hover {
+    background-color: #36A2EB;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.buy-button.small-button:active {
+    transform: scale(0.98);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
